@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Spring Boot</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}" />
+</head>
+<body>
+<form>
+    <div>User Name : </div><input type="text" name="user_name"> <br />
+    <div>Pass Word : </div><input type="text" name="pass_word"> <br />
+    <div>Name : </div><input type="text" name="name"> <br />
+    <div>Age : </div><input type="text" name="age"> <br />
+    <div>Gender : </div><input type="text" name="gender"> <br />
+    <div>City : </div><input type="text" name="city"> <br />
+    <input type="submit" name="" value="Thêm" style="margin-top: 10px;">
+</form>
+
+<table border="1">
+    <caption align="top">Danh sách nhân viên</caption>
+    <tr>
+        <th>Id</th>
+        <th>User Name</th>
+        <th>Pass Word</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>City</th>
+        <th>Function</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>
+            <a href="#">Sửa</a>
+            <a href="#">Xóa</a>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>
+            <a href="#">Sửa</a>
+            <a href="#">Xóa</a>
+        </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>
+            <a href="#">Sửa</a>
+            <a href="#">Xóa</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

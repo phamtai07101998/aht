@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Spring Boot</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}" />
+</head>
+<body>
+
+<div>
+    <a th:href="@{/home/add}">Thêm</a>
+</div>
+
+<table border="1">
+    <caption align="top">Danh sách nhân viên</caption>
+    <tr>
+        <th>Id</th>
+        <th>User Name</th>
+        <th>Pass Word</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>City</th>
+        <th>Function</th>
+    </tr>
+    <tbody th:each="user: ${users.getUsers()}">
+    <tr>
+        <td th:text="${user.getId()}"></td>
+        <td th:text="${user.getUserName()}"></td>
+        <td th:text="${user.getPassword()}"></td>
+        <td th:text="${user.getName()}"></td>
+        <td th:text="${user.getAge()}"></td>
+        <td th:text="${user.getGender()}"></td>
+        <td th:text="${user.getCity()}"></td>
+        <td>
+            <a th:href="@{/home/edit/{id}(id = ${user.getId()})}">Sửa</a>
+            <a th:href="@{/home/delete/{id}(id=${user.getId()})}">Xóa</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

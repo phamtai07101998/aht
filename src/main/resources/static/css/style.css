@@ -1,0 +1,16 @@
+div{
+			width: 100px;
+			float: left;
+			clear: both;
+			margin: 6px;
+		}
+		input{
+			padding: 5px;
+			margin: 5px;
+		}
+		form{
+			float: left;
+		}
+		table{
+			margin-left: 30%;
+		}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Spring Boot</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}" />
+</head>
+<body>
+<form method="POST" th:action="@{/home/updated}" th:object="${edit}" action="#">
+    <input type="hidden" id="id" name="id" th:field="*{id}">
+    <div>User Name : </div><input type="text" id="userName" name="userName" th:field="*{userName}" > <br />
+    <div>Pass Word : </div><input type="text" th:field="*{password}" > <br />
+    <div>Name : </div><input type="text" th:field="*{name}" > <br />
+    <div>Age : </div><input type="text" th:field="*{age}" > <br />
+    <div>Gender : </div><input type="text" th:field="*{gender}" > <br />
+    <div>City : </div><input type="text" th:field="*{city}" > <br />
+    <input type="submit" name="" value="Thêm" style="margin-top: 10px;">
+</form>
+
+
+</body>
+</html>
